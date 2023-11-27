@@ -6,7 +6,7 @@
 /*   By: het-taja <het-taja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 16:23:21 by het-taja          #+#    #+#             */
-/*   Updated: 2023/11/22 23:55:18 by het-taja         ###   ########.fr       */
+/*   Updated: 2023/11/28 00:34:52 by het-taja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		len2;
 	char	*str;
 
-	if (s1 && s2)
+	if (!s1 || !s2)
+		return (NULL);
+	else if (s1 && s2)
 	{
 		len1 = ft_strlen(s1);
 		len2 = ft_strlen(s2);

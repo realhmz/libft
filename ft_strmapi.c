@@ -6,7 +6,7 @@
 /*   By: het-taja <het-taja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 13:55:49 by het-taja          #+#    #+#             */
-/*   Updated: 2023/11/22 23:55:28 by het-taja         ###   ########.fr       */
+/*   Updated: 2023/11/28 00:43:33 by het-taja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		i;
 	char	*str;
 
+	if (!s || !f)
+		return (NULL);
 	i = ft_strlen(s);
 	str = malloc(i + 1);
 	if (!str)

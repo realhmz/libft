@@ -6,7 +6,7 @@
 /*   By: het-taja <het-taja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 22:41:17 by het-taja          #+#    #+#             */
-/*   Updated: 2023/11/22 23:55:06 by het-taja         ###   ########.fr       */
+/*   Updated: 2023/11/28 00:33:06 by het-taja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static	int	wrds_count(const char *str, char sep)
 
 	i = 0;
 	count = 0;
-	while (str[i])
+	while (str && str[i])
 	{
 		if (str[i] != sep)
 		{
@@ -39,7 +39,7 @@ static	char	*wrd_malloc(const char *str, char sep)
 	char	*word;
 
 	i = 0;
-	while (str[i] != sep && str[i])
+	while (str && str[i] && str[i] != sep)
 		i++;
 	word = (char *)malloc(sizeof(char) * (i + 1));
 	if (!word)

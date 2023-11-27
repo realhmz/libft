@@ -6,7 +6,7 @@
 /*   By: het-taja <het-taja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 17:15:45 by het-taja          #+#    #+#             */
-/*   Updated: 2023/11/22 23:55:37 by het-taja         ###   ########.fr       */
+/*   Updated: 2023/11/28 00:45:37 by het-taja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	end;
 	size_t	i;
 
-	if (!s1)
+	if (!s1 || !set)
 		return (0);
 	i = 0;
 	start = 0;

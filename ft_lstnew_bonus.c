@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: het-taja <het-taja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/03 02:35:15 by het-taja          #+#    #+#             */
-/*   Updated: 2023/11/22 23:55:11 by het-taja         ###   ########.fr       */
+/*   Created: 2023/11/12 12:54:08 by het-taja          #+#    #+#             */
+/*   Updated: 2023/11/27 17:31:25 by het-taja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strcmp(const char *s1, const char *s2)
+t_list	*ft_lstnew(void *content)
 {
-	int	i;
+	t_list	*head;
 
-	i = 0;
-	while (s1[i] || s2[i])
-	{
-		if (s1[i] == s2[i])
-			i++;
-		if (s1[i] > s2[i])
-			return (1);
-		if (s1[i] < s2[i])
-			return (-1);
-		i++;
-	}
-	return (0);
+	head = (t_list *)malloc(sizeof(t_list));
+	if (!head)
+		return (NULL);
+	head->content = content;
+	head->next = NULL;
+	return (head);
 }

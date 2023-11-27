@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: het-taja <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: het-taja <het-taja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 21:14:12 by het-taja          #+#    #+#             */
-/*   Updated: 2023/11/06 21:14:13 by het-taja         ###   ########.fr       */
+/*   Updated: 2023/11/27 17:32:14 by het-taja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 	size_t	len;
 
+	if (!dst || dstsize == 0)
+		return (ft_strlen(src));
 	lnth = ft_strlen(dst);
 	len = ft_strlen(src);
 	if (dstsize <= lnth)
